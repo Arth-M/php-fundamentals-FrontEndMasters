@@ -5,13 +5,16 @@
 
 $name = "Arthuro";
 echo "Hello world";
-
+echo "\n";
 echo("Hello woorld!");
 echo $name;
 
 /* this is a multiline
 commentary */
+echo '\n'; //does not work
 
+echo "\n";
+echo "Semicolons are mandatory!";
 
 /* this is a closing php tag :
 ?>
