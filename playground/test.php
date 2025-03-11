@@ -15,7 +15,13 @@ echo '\n'; //does not work
 
 echo "\n";
 echo "Semicolons are mandatory!";
+echo "\n";
+$varname = "Teaching"; //this is a variable
 
+$$varname = "lesson 1"; //this is a variable variable
+echo $varname;
+echo "\n";
+echo $Teaching;
 /* this is a closing php tag :
 ?>
 You can avoid it to prevent unwanted output from your script
