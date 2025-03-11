@@ -26,7 +26,21 @@ echo $Teaching;
 ?>
 You can avoid it to prevent unwanted output from your script
 */
+$last_year = 2024;
+echo "last year is $last_year";
+echo "\n";
+echo "New year is {$last_year+1}";
+echo"\n";
 
+$try_this = <<<TRYITOUT
+{json:
+  {blabla: coucou;
+  bloublou: $last_year + 1;
+}
+}
+TRYITOUT;
+
+echo $try_this;
 ?>
 
 comments does not work outside php tags as it is considered an output
