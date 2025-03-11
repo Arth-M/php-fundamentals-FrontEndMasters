@@ -75,15 +75,15 @@ print_my_first_function();
 //variable type (without OOP class consideration) :
 // bool, int, float, string, array, object, callable
 // (callable means a function)
-function calculate_tax(float $price, float $tva) { //int and float in case you want to specidy variable type
+function calculate_tax(float $price, float $tva=0.2) { //int and float in case you want to specidy variable type
   return $price * $tva;
-}
+} // you can set a default value for example for tax by declaring: function calculate_tax(float $price, float $tva=0.2) { }
 
 echo calculate_tax(60, 0.20);
 echo "\n";
 // echo calculate_tax(tax:0.20, price:120);
 echo "\n";
-echo calculate_tax($tax=0.20, $price=120);
+echo calculate_tax($tax=0.40, $price=60);
 
 // i++ & i+=1 sont différents, à checker
 /* this is a closing php tag :
