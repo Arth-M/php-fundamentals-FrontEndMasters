@@ -79,7 +79,7 @@ function calculate_tax(float $price, float $tva=0.2) { //int and float in case y
   return $price * $tva;
 } // you can set a default value for example for tax by declaring: function calculate_tax(float $price, float $tva=0.2) { }
 
-echo calculate_tax(60, 0.20);
+echo calculate_tax(60);
 echo "\n";
 // echo calculate_tax(tax:0.20, price:120);
 echo "\n";
