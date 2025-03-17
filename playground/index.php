@@ -7,5 +7,8 @@
 </head>
 <body>
   <h1>Are you PHP?</h1>
+  <?php
+  echo "Will this work?"
+  ?>
 </body>
 </html>
