@@ -103,6 +103,11 @@ You can avoid it to prevent unwanted output from your script
 */
 ?>
 
+CLI "php -S localhost:3000" or 4000 or any valid port will create a server
+
+Emmet is a code generator built into VScode, type only "!" at the beginning of an html file and it will
+bring you a basic html template
+
 comments does not work outside php tags as it is considered an output
 
 
