@@ -10,5 +10,6 @@
   <?php
   echo "Will this work?"
   ?>
+  <!-- use php -S command in the terminal to start a develpment server, development purposes only !  -->
 </body>
 </html>
