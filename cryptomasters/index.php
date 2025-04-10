@@ -10,16 +10,17 @@
 
   <p>Enter your amount of crypto</p>
 
-  <form action="">
+  <form action="convert.php" method="post">
+  <!-- <form action="convert.php" method="get"> -->
     <label for="amount">Amount</label>
-    <input type="text" id="amount">
+    <input type="text" id="amount" name="money_amount">
     <label for="crypto">Cryptocurrency</label>
     <select name="cryptocurrency" id="crypto">
-      <option value="bitcoin">BTC</option>
-      <option value="ether">ETH</option>
+      <option value="bitcoin(s)">BTC</option>
+      <option value="ether(s)">ETH</option>
     </select>
     <button type="submit">Convert</button>
   </form>
-  
+
 </body>
 </html>
