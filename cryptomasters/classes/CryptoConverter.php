@@ -1,12 +1,23 @@
 <?php
+// define('__ROOT__', dirname(__FILE__, 2));
+// echo __ROOT__.'/urls.php';
+// include_once(__ROOT__.'/urls.php');
+
+require_once(__DIR__.'/../urls.php');
+
+
 
 class AnotherConverter {
 
 }
 
+interface CanConvert {
+  public function convert (float $value): float;
+}
+
 class CryptoConverter extends AnotherConverter { //here CryptoConverter inherits
 // public and protected properties and methods from its parent AnotherConverter, which can be used using
-// parent keyword
+// parent keyword, following java rules
 
    //properties
 
@@ -24,13 +35,27 @@ class CryptoConverter extends AnotherConverter { //here CryptoConverter inherits
   //  my class CryptoConverter to the variable currencyCode
    public function __construct(public string $currencyCode) {
    }
+
+
    //methods
 
-   public function convert(float $value): float {
-    // the syntax is availability function methodName(parameters typed or not): outputType { instructions }
+   public function convert(float $value = 1): float|bool { //return float or boolean (in the case $json does not exist)
+    // the syntax is availability function methodName(parameters typed or not, with a default value or not/here default =1,
+    // in case no value is passed as parameter): outputType { instructions }
     // output type is optionnal
-
-
+    $code = $this->currencyCode;
+    // echo $this->currencyCode;
+    $api = "https://cex.io/api/ticker/$code/USD";
+    $json = file_get_contents($api);
+    if ($json) {
+    $change_values = json_decode($json);
+    // var_dump($change_values);
+    $last = $change_values->last;
+    return $value * $last;
+    } else {
+      return false;
+      //you can also throw an exception int his case
+    }
   }
 
 }

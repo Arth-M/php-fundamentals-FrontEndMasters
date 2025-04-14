@@ -16,8 +16,8 @@
     <input type="text" id="amount" name="money_amount">
     <label for="crypto">Cryptocurrency</label>
     <select name="cryptocurrency" id="crypto">
-      <option value="bitcoin(s)">BTC</option>
-      <option value="ether(s)">ETH</option>
+      <option value="BTC">Bitcoin(s)</option>
+      <option value="ETH">Ether(s)</option>
     </select>
     <button type="submit">Convert</button>
   </form>
