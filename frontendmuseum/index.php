@@ -23,12 +23,28 @@
     <h1><img src="images/logo.png" alt="Frontend Masters Museum" width="300"
             fetchpriority="high"></h1>
     <main>
+
+      <?php
+      include "data/data.php";
+
+      foreach ($exhibits as $object):
+      ?>
+
         <article>
-            <h2>Life in Ancient Greek</h2>
-            <p>Uncover the world of ancient Greece through the sculptures, tools, and jewelry found in ruins from over 2000 years ago that have been unearthed through modern science and technology.</p>
-            <img src="gallery/ancient-greece.png"
-                    fetchpriority="high" decoding="sync">
+
+          <?= //shortcut for <?php echo
+            // echo $object["title"]
+             "<h2>".$object["title"]."</h2>" ?>
+            <p><?= $object["description"] ?> </p>
+            <img src="/gallery/<?= $object["image"]?>"
+            fetchpriority='high' decoding='sync'>
+           <!-- <img src=\"gallery/".$object["image"]." fetchpriority=\"high\" decoding=\"sync\">" -->
+
+
         </article>
+
+      <?php endforeach; ?>
+
     </main>
 </body>
 </html>
