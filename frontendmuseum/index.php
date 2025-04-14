@@ -6,13 +6,13 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=optional" 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=optional"
           rel="stylesheet">
 
     <link rel="preload" href="https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyeAZ9hiJ-Ek-_EeA.woff2"
           as="font" fetchpriority="high">
 
-    <script src="script.js" defer></script>
+    <!-- <script src="script.js" defer></script> -->
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
