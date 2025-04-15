@@ -25,17 +25,18 @@
     <main>
 
       <?php
-      include "data/data.php";
+      $json = file_get_contents("data/data.json");
+      $exhibits = json_decode($json);
 
       foreach ($exhibits as $object):
       ?>
 
         <article>
-
+          <!-- <?php var_dump($object) ?>) -->
           <?= //shortcut for <?php echo
-             "<h2>".$object["title"]."</h2>" ?>
-            <p><?= $object["description"] ?> </p>
-            <img src="/gallery/<?= $object["image"]?>"
+             "<h2>".$object->{"title"}."</h2>" ?>
+            <p><?= $object->{"description"} ?> </p>
+            <img src="/gallery/<?= $object->{"image"}?>"
             fetchpriority='high' decoding='sync'>
            <!-- <img src=\"gallery/".$object["image"]." fetchpriority=\"high\" decoding=\"sync\">" -->
 
