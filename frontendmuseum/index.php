@@ -3,13 +3,13 @@
       include "classes.php";
       $db = new DB();
       $exhibits = $db->execute("SELECT * FROM Exhibits");
-      echo var_dump($exhibits);
+      // echo var_dump($exhibits);
 
-      echo "<ul>";
-      foreach ($exhibits as $object):
+      echo "<ul id='master'>";
+      foreach ($exhibits as $i=>$object):
       ?>
 
-      <li></li>
+      <li><a href="details.php?index=<?= $i ?>"><?php echo $object["title"] ?></a></li>
 
       <?php endforeach; ?>
       </ul>

@@ -13,7 +13,10 @@ class DB {
     $result = $db->query($query);
 
     if ($result) {
-      $all = $result->fetchArray(SQLITE3_ASSOC);
+      $all = [];
+      while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
+        array_push($all, $row);
+      }
       return $all;
     } else {
       return 0;
